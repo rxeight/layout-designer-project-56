@@ -71,6 +71,7 @@
         text-align: center;
     }
     @media (max-width: 1239px) {
+        width: 100%;
         padding: 20px;
         .prices {
             grid-template-columns: 1fr;
