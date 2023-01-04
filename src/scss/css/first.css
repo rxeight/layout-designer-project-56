@@ -1,0 +1,13 @@
+header {
+  display: grid;
+  grid-template: "logo navigation search";
+}
+header .logo {
+  grid-area: logo;
+}
+header nav {
+  grid-area: navigation;
+}
+header form {
+  grid-area: search;
+}

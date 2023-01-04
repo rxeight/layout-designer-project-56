@@ -1,0 +1,161 @@
+
+.first {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/banner.png');
+    background-position: center;
+    background-size: cover;
+    content: "";
+}
+#page-description {
+    display: grid;
+    max-width: 1200px;
+    justify-content: center;
+    justify-items: center;
+    padding: 200px 0;
+    header {
+        position: absolute;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        top: 25px;
+        grid-template: "logo navigation search";
+        font-size: 11px;
+        text-transform: uppercase;
+        .logo {
+            display: flex;
+            align-items: center;
+            grid-area: logo;
+            text-decoration: none;
+            color: $white;
+            &::before {
+                display: inline-block;
+                content: '';
+                background-image: url('../images/logo.svg');
+                background-size: cover;
+                height: 24px;
+                width: 24px;
+                margin-right: 16px;
+            }
+        }
+        nav {
+            display: flex;
+            gap: 24px;
+            grid-area: navigation;
+            justify-self: flex-start;
+            .nav-link {
+                text-decoration: none;
+                color: $fade; 
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        form {
+            grid-area: search;
+            input {
+                color: $white;
+                width: 248px;
+                height: 25px;
+                padding-left: 10px;
+                border-style: none;
+                border-radius: 50px;
+                background-color: $grey;
+            }
+        }
+    }
+    .content {
+        display: grid;
+        justify-items: center;
+        h1, h2 {
+            margin: 0;
+        }
+        p {
+          font-size: 16px;  
+        }
+        .text-form {
+            max-width: 570px;
+            form {
+                display: grid;
+                column-gap: 24px;
+                grid-template:  "name-field email-field"
+                                "submit     submit";
+                input {
+                    min-width: 270px;
+                    min-height: 50px;
+                }
+                .name {
+                    padding-left: 20px;
+                    margin-bottom: 1.5rem;
+                    border: 2px solid $fade;
+                    border-radius: 3px;
+                    grid-area: name-field;
+                    background: transparent;
+                    color: $white;
+                }
+                .email {
+                    padding-left: 20px;
+                    margin-bottom: 1.5rem;
+                    border: 2px solid $fade;
+                    border-radius: 3px;
+                    grid-area: email-field;
+                    background: transparent;
+                    color: $white;
+                }
+                .submit {
+                    color: $white;
+                    grid-area: submit;
+                    background-color: $green;
+                    padding: 20px 30px;
+                    border-radius: 5px;
+                };
+            }
+        }
+    } 
+}
+
+@media (max-width: 1239px) {
+    #page-description {
+        width: 100%;
+        header {
+            top: 0;
+            padding: 20px;
+            grid-template: "logo"
+                            "navigation"
+                            "search";
+            .logo {
+                justify-self: flex-start;
+                margin-bottom: 17px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 3px;
+                margin-bottom: 18px;
+            }
+            form {
+                width: 100%;
+                input {
+                    width: 100%;
+                }
+            }
+        }
+        .content {
+            height: 100%;
+            padding: 20px;
+            h1, h2, p {
+                text-align: center;
+            }
+            .text-form {
+                width: 100%;
+                form {
+                    grid-template: "name-field"
+                                    "email-field"
+                                    "submit";
+                }
+            }
+        }
+    }
+} 
