@@ -24,6 +24,13 @@ body h2 {
   font-weight: bold;
   text-transform: uppercase;
 }
+body .bg {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #08020D;
+}
 @media (max-width: 1239px) {
   body h1 {
     font-size: 30px;
@@ -189,5 +196,87 @@ body h2 {
   }
   #page-description .content .text-form form {
     grid-template: "name-field" "email-field" "submit";
+  }
+}
+#page-pricing {
+  display: flex;
+  max-width: 1200px;
+  padding-top: 100px;
+  flex-direction: column;
+  align-items: center;
+}
+#page-pricing h2 {
+  margin-bottom: 45px;
+}
+#page-pricing .prices {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 46px;
+}
+#page-pricing .prices .card {
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+  padding: 0 1.5rem;
+  flex-direction: column;
+  border-radius: 1rem;
+  margin-bottom: 43px;
+}
+#page-pricing .prices .card * {
+  font-weight: 400;
+}
+#page-pricing .prices .card h3 {
+  font-size: 24px;
+  align-self: center;
+  margin-bottom: 136px;
+}
+#page-pricing .prices .card .price-value {
+  font-size: 64px;
+  margin-bottom: 40px;
+}
+#page-pricing .prices .card .price-value span {
+  vertical-align: text-top;
+  font-size: 32px;
+}
+#page-pricing .prices .card .btn {
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 270px;
+  min-height: 66px;
+  border: 2px solid #cacaca;
+  border-radius: 5px;
+  background: transparent;
+}
+#page-pricing .prices .card .pricing-footer {
+  margin: 64px 0;
+  font-size: 12.8px;
+}
+#page-pricing .prices .free {
+  background-image: url("../images/subscribe_1.png");
+}
+#page-pricing .prices .standart {
+  background-image: url("../images/subscribe_2.png");
+}
+#page-pricing .prices .premium {
+  background-image: url("../images/subscribe_3.png");
+}
+#page-pricing p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+@media (max-width: 1239px) {
+  #page-pricing {
+    padding: 20px;
+  }
+  #page-pricing .prices {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
