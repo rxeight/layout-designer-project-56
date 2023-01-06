@@ -1,4 +1,5 @@
 /* Colors */
+/* Mixins */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
@@ -42,7 +43,7 @@ body .bg {
   }
 }
 
-.first {
+.banner {
   display: flex;
   justify-content: center;
   width: 100%;
@@ -53,14 +54,7 @@ body .bg {
   content: "";
 }
 
-#page-description {
-  display: grid;
-  max-width: 1200px;
-  justify-content: center;
-  justify-items: center;
-  padding: 200px 0;
-}
-#page-description header {
+header {
   position: absolute;
   display: grid;
   justify-items: center;
@@ -71,14 +65,14 @@ body .bg {
   font-size: 11px;
   text-transform: uppercase;
 }
-#page-description header .logo {
+header .logo {
   display: flex;
   align-items: center;
   grid-area: logo;
   text-decoration: none;
   color: #fff;
 }
-#page-description header .logo::before {
+header .logo::before {
   display: inline-block;
   content: "";
   background-image: url("../images/logo.svg");
@@ -87,23 +81,23 @@ body .bg {
   width: 24px;
   margin-right: 16px;
 }
-#page-description header nav {
+header nav {
   display: flex;
   gap: 24px;
   grid-area: navigation;
   justify-self: flex-start;
 }
-#page-description header nav .nav-link {
+header nav .nav-link {
   text-decoration: none;
   color: #cacaca;
 }
-#page-description header nav .nav-link:hover {
+header nav .nav-link:hover {
   color: #fff;
 }
-#page-description header form {
+header form {
   grid-area: search;
 }
-#page-description header form input {
+header form input {
   color: #fff;
   width: 248px;
   height: 25px;
@@ -111,6 +105,37 @@ body .bg {
   border-style: none;
   border-radius: 50px;
   background-color: #3C3B3D;
+}
+@media (max-width: 1239px) {
+  header {
+    top: 0;
+    padding: 20px;
+    grid-template: "logo" "navigation" "search";
+  }
+  header .logo {
+    justify-self: flex-start;
+    margin-bottom: 17px;
+  }
+  header nav {
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 18px;
+  }
+  header form {
+    width: 100%;
+  }
+  header form input {
+    width: 100%;
+  }
+}
+
+#page-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 0;
 }
 #page-description .content {
   display: grid;
@@ -159,34 +184,11 @@ body .bg {
   padding: 20px 30px;
   border-radius: 5px;
 }
-
 @media (max-width: 1239px) {
   #page-description {
     width: 100%;
-  }
-  #page-description header {
-    top: 0;
     padding: 20px;
-    grid-template: "logo" "navigation" "search";
-  }
-  #page-description header .logo {
-    justify-self: flex-start;
-    margin-bottom: 17px;
-  }
-  #page-description header nav {
-    flex-direction: column;
-    gap: 3px;
-    margin-bottom: 18px;
-  }
-  #page-description header form {
-    width: 100%;
-  }
-  #page-description header form input {
-    width: 100%;
-  }
-  #page-description .content {
-    height: 100%;
-    padding: 20px;
+    padding: 220px 20px;
   }
   #page-description .content h1, #page-description .content h2, #page-description .content p {
     text-align: center;
@@ -198,12 +200,14 @@ body .bg {
     grid-template: "name-field" "email-field" "submit";
   }
 }
+
 #page-pricing {
   display: flex;
-  max-width: 1200px;
-  padding-top: 100px;
   flex-direction: column;
+  max-width: 1200px;
+  justify-content: center;
   align-items: center;
+  padding-top: 100px;
 }
 #page-pricing h2 {
   margin-bottom: 45px;
@@ -240,18 +244,18 @@ body .bg {
   font-size: 32px;
 }
 #page-pricing .prices .card .btn {
-  font-size: 16px;
-  color: #fff;
-  text-transform: uppercase;
-  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 270px;
-  min-height: 66px;
   border: 2px solid #cacaca;
   border-radius: 5px;
   background: transparent;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  min-width: 270px;
+  min-height: 66px;
+  text-transform: uppercase;
 }
 #page-pricing .prices .card .pricing-footer {
   margin: 64px 0;
@@ -285,8 +289,9 @@ body .bg {
 #page-news {
   display: flex;
   flex-direction: column;
-  align-items: center;
   max-width: 1200px;
+  justify-content: center;
+  align-items: center;
   padding-top: 100px;
 }
 #page-news h2 {
@@ -319,6 +324,7 @@ body .bg {
   margin: 0;
 }
 #page-news .news-item .news-body p {
+  color: #cacaca;
   margin: 30px 0 24px;
   font-size: 16px;
 }
@@ -405,4 +411,40 @@ body .bg {
     margin: 0;
     color: #cacaca;
   }
+}
+
+#page-app {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+#page-app .app {
+  display: flex;
+}
+#page-app .app img {
+  margin: 0 143px;
+}
+#page-app .app p {
+  color: #cacaca;
+  font-size: 16px;
+}
+#page-app .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #cacaca;
+  border-radius: 5px;
+  background: transparent;
+  text-decoration: none;
+  display: inline-flex;
+  border-radius: 32px;
+  padding: 16px 40px;
+  font-size: 12.8px;
+  color: #fff;
+  background-color: #95390C;
+  border: none;
 }

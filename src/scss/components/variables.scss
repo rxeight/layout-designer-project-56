@@ -8,3 +8,25 @@ $green: #34C176;
 $orange: #F89202;
 $violet: #5328A1;
 $brown: #95390C;
+
+/* Mixins */
+@mixin desktop {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+}
+@mixin mobile {
+    width: 100%;
+    padding: 20px;
+}
+@mixin btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $fade;
+    border-radius: 5px;
+    background: transparent;
+    text-decoration: none;
+}
