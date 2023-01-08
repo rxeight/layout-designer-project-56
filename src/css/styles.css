@@ -580,7 +580,7 @@ header form input {
   column-gap: 50px;
   row-gap: 25px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
 }
 #page-discography .discography-item {
   width: 100%;
@@ -609,9 +609,13 @@ header form input {
   font-weight: bold;
 }
 @media (max-width: 1239px) {
-  #page-discography .tracks {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(1fr, auto);
+  #page-discography .disco {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+  }
+  #page-discography .disco .discography-item img {
+    width: 137px;
+    height: 137px;
   }
 }
 
@@ -630,7 +634,7 @@ header form input {
   column-gap: 50px;
   row-gap: 25px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(auto, 1fr);
+  grid-template-rows: repeat(auto-fill, 1fr);
 }
 #page-similar .similar-item {
   width: 100%;
@@ -661,9 +665,13 @@ header form input {
   font-weight: bold;
 }
 @media (max-width: 1239px) {
-  #page-similar .tracks {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(1fr, auto);
+  #page-similar .similar {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+  }
+  #page-similar .similar .similar-item img {
+    width: 137px;
+    height: 137px;
   }
 }
 

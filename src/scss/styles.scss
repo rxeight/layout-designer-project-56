@@ -467,7 +467,7 @@ header {
         column-gap: 50px;
         row-gap: 25px;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(auto, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
     }
     .discography-item {
         width: 100%;
@@ -496,9 +496,15 @@ header {
         }
     }
     @media (max-width: 1239px) {
-        .tracks {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(1fr, auto);
+        .disco {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(auto-fill, 1fr);
+            .discography-item {
+                img {
+                    width: 137px;
+                    height: 137px;
+                }
+            }
         }
     }
 }
@@ -513,7 +519,7 @@ header {
         column-gap: 50px;
         row-gap: 25px;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(auto, 1fr);
+        grid-template-rows: repeat(auto-fill, 1fr);
     }
     .similar-item {
         width: 100%;
@@ -544,9 +550,15 @@ header {
         }
     }
     @media (max-width: 1239px) {
-        .tracks {
-            grid-template-columns: 1fr;
-            grid-template-rows: repeat(1fr, auto);
+        .similar {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(auto-fill, 1fr);
+            .similar-item {
+                img {
+                    width: 137px;
+                    height: 137px;
+                }
+            }
         }
     }
 }
