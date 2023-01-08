@@ -114,7 +114,8 @@ header {
                 background-size: cover;
                 height: 20px;
                 width: 20px;
-                margin-right: 16px;  
+                margin-right: 16px; 
+                filter: invert(100%) sepia(0%) saturate(100%) brightness(100%) contrast(100%); 
             }
         }
         .violet {
@@ -126,7 +127,8 @@ header {
                 background-size: cover;
                 height: 20px;
                 width: 20px;
-                margin-right: 16px;   
+                margin-right: 16px;
+                filter: invert(100%) sepia(0%) saturate(100%) brightness(100%) contrast(100%);   
             }
         }
     }
@@ -454,7 +456,99 @@ header {
             grid-template-rows: repeat(1fr, auto);
         }
     }
-
+}
+#page-discography {
+    @include desktop;
+    @include flex-column;
+    padding-top: 100px;
+    .disco {
+        width: 100%;
+        display:grid;
+        column-gap: 50px;
+        row-gap: 25px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+    }
+    .discography-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        img {
+            width: 250px;
+            height: 250px;
+        }
+        .discography-info {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h3,p {
+                margin: 0;
+                font-size: 16px;
+            }
+            h3 {
+                text-transform: capitalize;
+                line-height: 27px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+    @media (max-width: 1239px) {
+        .tracks {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(1fr, auto);
+        }
+    }
+}
+#page-similar {
+    @include desktop;
+    @include flex-column;
+    padding-top: 100px;
+    margin-bottom: 100px;
+    .similar {
+        width: 100%;
+        display:grid;
+        column-gap: 50px;
+        row-gap: 25px;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(auto, 1fr);
+    }
+    .similar-item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        img {
+            width: 250px;
+            height: 250px;
+        }
+        .similar-info {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3,p {
+                margin: 0;
+                font-size: 16px;
+                text-align: center;
+            }
+            h3 {
+                text-transform: capitalize;
+                line-height: 27px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+        }
+    }
+    @media (max-width: 1239px) {
+        .tracks {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(1fr, auto);
+        }
+    }
 }
 footer {
     @include flex-column;

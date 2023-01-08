@@ -192,6 +192,7 @@ header form input {
   height: 20px;
   width: 20px;
   margin-right: 16px;
+  filter: invert(100%) sepia(0%) saturate(100%) brightness(100%) contrast(100%);
 }
 #page-description .buttons .violet {
   background-color: #5328A1;
@@ -204,6 +205,7 @@ header form input {
   height: 20px;
   width: 20px;
   margin-right: 16px;
+  filter: invert(100%) sepia(0%) saturate(100%) brightness(100%) contrast(100%);
 }
 #page-description h1, #page-description h2 {
   margin: 0;
@@ -559,6 +561,107 @@ header form input {
 }
 @media (max-width: 1239px) {
   #page-popular-track .tracks {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr, auto);
+  }
+}
+
+#page-discography {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+}
+#page-discography .disco {
+  width: 100%;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+}
+#page-discography .discography-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+#page-discography .discography-item img {
+  width: 250px;
+  height: 250px;
+}
+#page-discography .discography-item .discography-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#page-discography .discography-item .discography-info h3, #page-discography .discography-item .discography-info p {
+  margin: 0;
+  font-size: 16px;
+}
+#page-discography .discography-item .discography-info h3 {
+  text-transform: capitalize;
+  line-height: 27px;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width: 1239px) {
+  #page-discography .tracks {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr, auto);
+  }
+}
+
+#page-similar {
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+#page-similar .similar {
+  width: 100%;
+  display: grid;
+  column-gap: 50px;
+  row-gap: 25px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+}
+#page-similar .similar-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+#page-similar .similar-item img {
+  width: 250px;
+  height: 250px;
+}
+#page-similar .similar-item .similar-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#page-similar .similar-item .similar-info h3, #page-similar .similar-item .similar-info p {
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+#page-similar .similar-item .similar-info h3 {
+  text-transform: capitalize;
+  line-height: 27px;
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width: 1239px) {
+  #page-similar .tracks {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(1fr, auto);
   }
