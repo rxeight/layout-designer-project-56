@@ -11,15 +11,12 @@ $brown: #95390C;
 
 /* Mixins */
 @mixin desktop {
+    max-width: 1200px;
+    padding: 20px;
+}
+@mixin flex-column {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    justify-content: center;
-    align-items: center;
-}
-@mixin mobile {
-    width: 100%;
-    padding: 20px;
 }
 @mixin btn {
     display: flex;
@@ -29,4 +26,12 @@ $brown: #95390C;
     border-radius: 5px;
     background: transparent;
     text-decoration: none;
+}
+@mixin form-field {
+    background: transparent;
+    color: $white;
+    padding-left: 20px;
+    margin-bottom: 1.5rem;
+    border: 2px solid $fade;
+    border-radius: 3px;
 }

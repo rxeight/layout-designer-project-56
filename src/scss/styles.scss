@@ -1,15 +1,10 @@
 @import 'components/variables';
 @import 'components/general';
 
-.banner {
+section {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/banner.png');
-    background-position: center;
-    background-size: cover;
-    content: "";
+    flex-direction: column;
+    align-items: center;
 }
 header {
     position: absolute;
@@ -87,75 +82,66 @@ header {
 }
 #page-description {
     @include desktop;
-    padding: 200px 0;
-    .content {
-        display: grid;
-        justify-items: center;
-        h1, h2 {
-            margin: 0;
+    @include flex-column;
+    align-items: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    h1, h2 {
+        text-align: center;
+        margin: 0;
+    }
+    p {
+        text-align: center;
+        font-size: 16px;  
+    }
+    .text-form {
+        max-width: 570px;
+        form {
+            display: grid;
+            column-gap: 24px;
+            grid-template:  "name-field email-field"
+                            "submit     submit";
+            input {
+                min-width: 270px;
+                min-height: 50px;
+            }
+            .name {
+                @include form-field;
+                grid-area: name-field;
+            }
+            .email {
+                @include form-field;
+                grid-area: email-field;
+            }
+            .submit {
+                color: $white;
+                grid-area: submit;
+                background-color: $green;
+                padding: 20px 30px;
+                border-radius: 5px;
+            };
         }
-        p {
-          font-size: 16px;  
+    }
+    @media (max-width: 1239px) {
+        width: 100%;
+        h1, h2, p {
+            text-align: center;
         }
         .text-form {
-            max-width: 570px;
+            max-width: none;
+            width: 100%;
             form {
-                display: grid;
-                column-gap: 24px;
-                grid-template:  "name-field email-field"
-                                "submit     submit";
-                input {
-                    min-width: 270px;
-                    min-height: 50px;
-                }
-                .name {
-                    padding-left: 20px;
-                    margin-bottom: 1.5rem;
-                    border: 2px solid $fade;
-                    border-radius: 3px;
-                    grid-area: name-field;
-                    background: transparent;
-                    color: $white;
-                }
-                .email {
-                    padding-left: 20px;
-                    margin-bottom: 1.5rem;
-                    border: 2px solid $fade;
-                    border-radius: 3px;
-                    grid-area: email-field;
-                    background: transparent;
-                    color: $white;
-                }
-                .submit {
-                    color: $white;
-                    grid-area: submit;
-                    background-color: $green;
-                    padding: 20px 30px;
-                    border-radius: 5px;
-                };
-            }
-        }
-    } 
-    @media (max-width: 1239px) {
-        @include mobile;
-        padding: 220px 20px;
-        .content {
-            h1, h2, p {
-                text-align: center;
-            }
-            .text-form {
-                width: 100%;
-                form {
-                    grid-template: "name-field"
-                                    "email-field"
-                                    "submit";
-                }
+                grid-template: "name-field"
+                                "email-field"
+                                "submit";
             }
         }
     }
 }
 #page-pricing {
     @include desktop;
+    @include flex-column;
+    align-items: center;
     padding-top: 100px;
     h2 {
         margin-bottom: 45px;
@@ -165,17 +151,12 @@ header {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 46px;
         .card {
-            display: flex;
-            justify-content: center;
+            @include flex-column;
             background-position: center;
             background-size: cover;
             padding: 0 1.5rem;
-            flex-direction: column;
             border-radius: 1rem;
             margin-bottom: 43px;
-            * {
-                font-weight: 400;
-            }
             h3 {
                 font-size: 24px;
                 align-self: center;
@@ -183,6 +164,7 @@ header {
             }
             .price-value {
                 font-size: 64px;
+                align-self: center;
                 margin-bottom: 40px;
                 span {
                     vertical-align: text-top;
@@ -213,20 +195,22 @@ header {
         }
     }
     p {
+        text-align: center;
         font-size: 16px;
         font-weight: 400;
-        text-align: center;
     }
     @media (max-width: 1239px) {
-        @include mobile;
+        width: 100%;
         .prices {
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: repeat(3, 1fr);
         }
     }
 }
 #page-news {
     @include desktop;
+    @include flex-column;
+    align-items: center;
     padding-top: 100px;
     h2 {
         margin-bottom: 48px;
@@ -246,9 +230,8 @@ header {
             grid-area: img;
         }
         .news-body {
-            display: flex;
+            @include flex-column;
             grid-area: news-body;
-            flex-direction: column;
             h3 {
                 text-transform: capitalize;
                 font-size: 30px;
@@ -262,8 +245,7 @@ header {
             }
         }
         .news-footer {
-            display: flex;
-            flex-direction: column;
+            @include flex-column;
             grid-area: news-footer;
             .news-author {
                 display: flex;
@@ -329,13 +311,12 @@ header {
         }
     }
     @media (max-width: 1239px) {
-        @include mobile;
+        width: 100%;
         .news {
             gap: 64px;
         }
         .news-item {
-            display: flex;
-            flex-direction: column;
+            @include flex-column;
             img {
                 width: 100%;
                 margin-bottom: 50px;
@@ -358,8 +339,10 @@ header {
 }
 #page-app {
     @include desktop;
+    @include flex-column;
+    align-items: center;
     padding-top: 100px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     .app {
         display: flex;
         img {
@@ -379,5 +362,73 @@ header {
         color: $white;
         background-color: $brown;
         border: none;
+    }
+    @media (max-width: 1239px) {
+        width: 100%;
+        .app {
+            flex-direction: column-reverse;
+            img {
+                margin: 0;
+            }
+        }
+    }
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: normal;
+        text-decoration: none;
+        color: $white;
+    }
+    hr {
+        width: 100%;
+        border: 1px solid #E0E0E0;
+    }
+    h2 {
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: bold;
+        text-transform: uppercase
+    }
+    .top-footer {
+        @include desktop;
+        display: grid;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        .column {
+            @include flex-column;
+            font-size: 16px;
+        }
+        .icons {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+        }
+        @media (max-width: 1239px) {
+            gap: 30px;
+            width: 100%;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+        }
+    }
+    .bottom-footer {
+        @include desktop;
+        display: flex;
+        width: 100%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        gap: 16px;
+        @media (max-width: 1239px) {
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 1239px) {
+        align-items: stretch;
     }
 }
