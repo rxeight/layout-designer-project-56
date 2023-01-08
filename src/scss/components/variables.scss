@@ -12,6 +12,7 @@ $brown: #95390C;
 /* Mixins */
 @mixin desktop {
     max-width: 1200px;
+    width: 100%;
     padding: 20px;
 }
 @mixin flex-column {
@@ -22,7 +23,6 @@ $brown: #95390C;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid $fade;
     border-radius: 5px;
     background: transparent;
     text-decoration: none;
