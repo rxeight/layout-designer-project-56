@@ -472,7 +472,6 @@ header {
     .discography-item {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 15px;
         img {
             width: 250px;
@@ -496,13 +495,9 @@ header {
     }
     @media (max-width: 1239px) {
         .disco {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 138px);
             grid-template-rows: repeat(auto-fill, 1fr);
             .discography-item {
-                .discography-info {
-                    width: 100%;
-                    max-width: 137px;
-                }
                 img {
                     width: 137px;
                     height: 137px;
@@ -528,7 +523,6 @@ header {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 15px;
         img {
             width: 250px;
@@ -538,7 +532,6 @@ header {
             width: 100%;
             display: flex;
             flex-direction: column;
-            align-items: center;
             h3,p {
                 margin: 0;
                 font-size: 16px;
@@ -554,7 +547,7 @@ header {
     }
     @media (max-width: 1239px) {
         .similar {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, 137px);
             grid-template-rows: repeat(auto-fill, 1fr);
             .similar-item {
                 img {
