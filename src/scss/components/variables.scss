@@ -13,6 +13,8 @@ $brown: #95390C;
 @mixin desktop {
     max-width: 1200px;
     width: 100%;
+}
+@mixin mobile {
     padding: 20px;
 }
 @mixin flex-column {

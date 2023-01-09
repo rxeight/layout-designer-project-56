@@ -67,6 +67,11 @@ section {
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 1239px) {
+  section {
+    padding: 20px;
+  }
+}
 
 .center {
   align-items: center;
@@ -78,20 +83,19 @@ section {
 
 header {
   position: absolute;
-  display: grid;
-  justify-items: center;
+  display: flex;
   align-items: center;
+  max-width: 1200px;
   width: 100%;
   top: 25px;
-  grid-template: "logo navigation search";
   font-size: 11px;
   text-transform: uppercase;
 }
 header .logo {
   display: flex;
   align-items: center;
-  grid-area: logo;
   text-decoration: none;
+  margin-right: 90px;
   color: #fff;
 }
 header .logo::before {
@@ -106,8 +110,7 @@ header .logo::before {
 header nav {
   display: flex;
   gap: 24px;
-  grid-area: navigation;
-  justify-self: flex-start;
+  margin-right: 451px;
 }
 header nav .nav-link {
   text-decoration: none;
@@ -115,9 +118,6 @@ header nav .nav-link {
 }
 header nav .nav-link:hover {
   color: #fff;
-}
-header form {
-  grid-area: search;
 }
 header form input {
   color: #fff;
@@ -130,9 +130,10 @@ header form input {
 }
 @media (max-width: 1239px) {
   header {
-    top: 0;
     padding: 20px;
-    grid-template: "logo" "navigation" "search";
+    flex-direction: column;
+    align-items: stretch;
+    top: 0;
   }
   header .logo {
     justify-self: flex-start;
@@ -158,7 +159,6 @@ header form input {
 #page-description {
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   padding-top: 200px;
@@ -209,9 +209,13 @@ header form input {
 }
 #page-description h1, #page-description h2 {
   margin: 0;
+  color: #fff;
 }
 #page-description p {
+  margin-top: 31px;
+  margin-bottom: 17px;
   font-size: 16px;
+  color: #fff;
 }
 #page-description .text-form {
   max-width: 570px;
@@ -254,6 +258,10 @@ header form input {
   #page-description {
     width: 100%;
   }
+  #page-description p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
   #page-description .buttons {
     flex-direction: column;
   }
@@ -269,7 +277,6 @@ header form input {
 #page-pricing {
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -350,7 +357,6 @@ header form input {
 #page-news {
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -476,7 +482,6 @@ header form input {
 #page-app {
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -522,7 +527,6 @@ header form input {
 #page-popular-track {
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -569,7 +573,6 @@ header form input {
 #page-discography {
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -620,7 +623,6 @@ header form input {
 #page-similar {
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -696,7 +698,6 @@ footer h2 {
 footer .top-footer {
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   display: grid;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -724,7 +725,6 @@ footer .top-footer .icons {
 footer .bottom-footer {
   max-width: 1200px;
   width: 100%;
-  padding: 20px;
   display: flex;
   width: 100%;
   padding-top: 2rem;

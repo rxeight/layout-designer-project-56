@@ -4,6 +4,9 @@
 section {
     @include flex-column;
     align-items: center;
+    @media (max-width: 1239px) {
+        padding: 20px;
+    }
 }
 .center {
     align-items: center;
@@ -13,19 +16,17 @@ section {
 }
 header {
     position: absolute;
-    display: grid;
-    justify-items: center;
+    display: flex;
     align-items: center;
-    width: 100%;
+    @include desktop;
     top: 25px;
-    grid-template: "logo navigation search";
     font-size: 11px;
     text-transform: uppercase;
     .logo {
         display: flex;
         align-items: center;
-        grid-area: logo;
         text-decoration: none;
+        margin-right: 90px;
         color: $white;
         &::before {
             display: inline-block;
@@ -40,8 +41,7 @@ header {
     nav {
         display: flex;
         gap: 24px;
-        grid-area: navigation;
-        justify-self: flex-start;
+        margin-right: 451px;
         .nav-link {
             text-decoration: none;
             color: $fade; 
@@ -51,7 +51,6 @@ header {
         }
     }
     form {
-        grid-area: search;
         input {
             color: $white;
             width: 248px;
@@ -63,11 +62,10 @@ header {
         }
     }
     @media (max-width: 1239px) {
-        top: 0;
         padding: 20px;
-        grid-template: "logo"
-                        "navigation"
-                        "search";
+        flex-direction: column;
+        align-items: stretch;
+        top: 0;
         .logo {
             justify-self: flex-start;
             margin-bottom: 17px;
@@ -134,9 +132,13 @@ header {
     }
     h1, h2 {
         margin: 0;
+        color: $white;
     }
     p {
-        font-size: 16px;  
+        margin-top: 31px;
+        margin-bottom: 17px;
+        font-size: 16px;
+        color: $white;  
     }
     .text-form {
         max-width: 570px;
@@ -168,6 +170,10 @@ header {
     }
     @media (max-width: 1239px) {
         width: 100%;
+        p {
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
         .buttons {
             flex-direction: column;
         }
