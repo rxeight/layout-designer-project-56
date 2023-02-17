@@ -1,10 +1,10 @@
+/* Main */
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
-
-/* Main */
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
     margin: 0;
@@ -13,12 +13,14 @@ body {
     line-height: 1.5;
     color: $fade;
     h1 {
+        color: $white;
         font-size: 60px;
         line-height: 90px;
         font-weight: bold;
         text-transform: uppercase;
     }
     h2{
+        color: $white;
         font-size: 38px;
         line-height: 57px;
         font-weight: bold;
@@ -51,7 +53,7 @@ body {
         content: "";
     }
 
-    @media (min-width: 1239px) {
+    @media (max-width: 1239px) {
         h1 {
             font-size: 30px;
             line-height: 45px;

@@ -1,0 +1,64 @@
+/* Main */ /* Colors */
+/* Mixins */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #cacaca;
+}
+body h1 {
+  color: #fff;
+  font-size: 60px;
+  line-height: 90px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body h2 {
+  color: #fff;
+  font-size: 38px;
+  line-height: 57px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+body .banner-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+  content: "";
+}
+body .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #08020D;
+}
+body .bg-gradient {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
+}
+body .artist-bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/Morten Harket.png");
+  background-position: center;
+  background-size: cover;
+  content: "";
+}
+@media (max-width: 1239px) {
+  body h1 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  body h2 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}

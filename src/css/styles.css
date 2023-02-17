@@ -1,11 +1,12 @@
 /* Colors */
 /* Mixins */
+/* Main */ /* Colors */
+/* Mixins */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Main */
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -14,12 +15,14 @@ body {
   color: #cacaca;
 }
 body h1 {
+  color: #fff;
   font-size: 60px;
   line-height: 90px;
   font-weight: bold;
   text-transform: uppercase;
 }
 body h2 {
+  color: #fff;
   font-size: 38px;
   line-height: 57px;
   font-weight: bold;
@@ -65,12 +68,8 @@ body .artist-bg {
 section {
   display: flex;
   flex-direction: column;
+  padding: 20px;
   align-items: center;
-}
-@media (max-width: 1239px) {
-  section {
-    padding: 20px;
-  }
 }
 
 .center {
@@ -82,23 +81,28 @@ section {
 }
 
 header {
+  width: 100%;
   position: absolute;
   display: flex;
   align-items: center;
-  max-width: 1200px;
-  width: 100%;
+  justify-content: space-around;
   top: 25px;
   font-size: 11px;
   text-transform: uppercase;
 }
-header .logo {
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+header nav .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin-right: 90px;
   color: #fff;
+  margin-right: 90px;
 }
-header .logo::before {
+header nav .logo::before {
   display: inline-block;
   content: "";
   background-image: url("../images/logo.svg");
@@ -106,11 +110,6 @@ header .logo::before {
   height: 24px;
   width: 24px;
   margin-right: 16px;
-}
-header nav {
-  display: flex;
-  gap: 24px;
-  margin-right: 451px;
 }
 header nav .nav-link {
   text-decoration: none;
@@ -135,14 +134,14 @@ header form input {
     align-items: stretch;
     top: 0;
   }
-  header .logo {
-    justify-self: flex-start;
-    margin-bottom: 17px;
-  }
   header nav {
+    align-items: flex-start;
     flex-direction: column;
     gap: 3px;
     margin-bottom: 18px;
+  }
+  header nav .logo {
+    margin-bottom: 17px;
   }
   header form {
     width: 100%;
@@ -275,6 +274,7 @@ header form input {
 }
 
 #page-pricing {
+  color: #fff;
   max-width: 1200px;
   width: 100%;
   display: flex;
@@ -385,6 +385,7 @@ header form input {
   grid-area: news-body;
 }
 #page-news .news-item .news-body h3 {
+  color: #fff;
   text-transform: capitalize;
   font-size: 30px;
   line-height: 45px;
@@ -716,6 +717,7 @@ footer .top-footer .icons {
 }
 @media (max-width: 1239px) {
   footer .top-footer {
+    padding: 20px;
     gap: 30px;
     width: 100%;
     grid-template-columns: 1fr;
@@ -733,11 +735,7 @@ footer .bottom-footer {
 }
 @media (max-width: 1239px) {
   footer .bottom-footer {
+    padding: 20px;
     flex-direction: column;
-  }
-}
-@media (max-width: 1239px) {
-  footer {
-    align-items: stretch;
   }
 }

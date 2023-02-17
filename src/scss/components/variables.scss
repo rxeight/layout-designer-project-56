@@ -14,9 +14,6 @@ $brown: #95390C;
     max-width: 1200px;
     width: 100%;
 }
-@mixin mobile {
-    padding: 20px;
-}
 @mixin flex-column {
     display: flex;
     flex-direction: column;
