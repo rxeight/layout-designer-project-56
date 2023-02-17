@@ -1,10 +1,10 @@
-@import 'components/variables';
+@import 'components/variables';max
 @import 'components/general';
 
 section {
     @include flex-column;
     align-items: center;
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         padding: 20px;
     }
 }
@@ -61,7 +61,7 @@ header {
             background-color: $grey;
         }
     }
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         padding: 20px;
         flex-direction: column;
         align-items: stretch;
@@ -168,7 +168,7 @@ header {
             };
         }
     }
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         width: 100%;
         p {
             margin-top: 16px;
@@ -249,7 +249,7 @@ header {
         font-size: 16px;
         font-weight: 400;
     }
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         width: 100%;
         .prices {
             grid-template-columns: 1fr;
@@ -358,7 +358,7 @@ header {
             }
         }
     }
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         width: 100%;
         .news {
             gap: 64px;
@@ -410,7 +410,7 @@ header {
         background-color: $brown;
         border: none;
     }
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         width: 100%;
         .app {
             flex-direction: column-reverse;
@@ -456,7 +456,7 @@ header {
             }
         }
     }
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         .tracks {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(1fr, auto);
@@ -499,7 +499,7 @@ header {
             }
         }
     }
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         .disco {
             grid-template-columns: repeat(2, 138px);
             grid-template-rows: repeat(auto-fill, 1fr);
@@ -551,7 +551,7 @@ header {
             }
         }
     }
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         .similar {
             grid-template-columns: repeat(2, 137px);
             grid-template-rows: repeat(auto-fill, 1fr);
@@ -565,6 +565,7 @@ header {
     }
 }
 footer {
+    @include desktop;
     @include flex-column;
     align-items: center;
     a {
@@ -600,7 +601,7 @@ footer {
             flex-direction: row;
             gap: 24px;
         }
-        @media (max-width: 1239px) {
+        @media (min-width: 1240px) {
             gap: 30px;
             width: 100%;
             grid-template-columns: 1fr;
@@ -614,11 +615,11 @@ footer {
         padding-top: 2rem;
         padding-bottom: 2rem;
         gap: 16px;
-        @media (max-width: 1239px) {
+        @media (min-width: 1240px) {
             flex-direction: column;
         }
     }
-    @media (max-width: 1239px) {
+    @media (min-width: 1240px) {
         align-items: stretch;
     }
 }

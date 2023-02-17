@@ -51,7 +51,7 @@ body {
         content: "";
     }
 
-    @media (max-width: 1239px) {
+    @media (min-width: 1239px) {
         h1 {
             font-size: 30px;
             line-height: 45px;
