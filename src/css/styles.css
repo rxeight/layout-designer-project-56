@@ -28,6 +28,11 @@ body h2 {
   font-weight: bold;
   text-transform: uppercase;
 }
+body .align-items-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 body .banner-bg {
   width: 100%;
   height: 100%;
@@ -65,18 +70,17 @@ body .artist-bg {
   }
 }
 
-section {
-  display: flex;
-  flex-direction: column;
+.container {
+  width: 100%;
   padding: 20px;
-  align-items: center;
+}
+@media (min-width: 1240px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
-.center {
-  align-items: center;
-}
-
-.tcenter {
+.text-align-center {
   text-align: center;
 }
 
@@ -156,8 +160,6 @@ header form input {
 }
 
 #page-description {
-  max-width: 1200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 200px;
@@ -275,8 +277,6 @@ header form input {
 
 #page-pricing {
   color: #fff;
-  max-width: 1200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -355,8 +355,6 @@ header form input {
 }
 
 #page-news {
-  max-width: 1200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -481,8 +479,6 @@ header form input {
 }
 
 #page-app {
-  max-width: 1200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -526,8 +522,6 @@ header form input {
 }
 
 #page-popular-track {
-  max-width: 1200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -560,6 +554,7 @@ header form input {
   font-size: 12.8px;
 }
 #page-popular-track .popular-track .track-info h3 {
+  color: #fff;
   text-transform: uppercase;
   line-height: 19.2px;
   font-weight: bold;
@@ -572,8 +567,6 @@ header form input {
 }
 
 #page-discography {
-  max-width: 1200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -605,6 +598,7 @@ header form input {
   font-size: 16px;
 }
 #page-discography .discography-item .discography-info h3 {
+  color: #fff;
   text-transform: capitalize;
   line-height: 27px;
   font-size: 18px;
@@ -622,8 +616,6 @@ header form input {
 }
 
 #page-similar {
-  max-width: 1200px;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding-top: 100px;
@@ -658,6 +650,7 @@ header form input {
   text-align: center;
 }
 #page-similar .similar-item .similar-info h3 {
+  color: #fff;
   text-transform: capitalize;
   line-height: 27px;
   font-size: 18px;
@@ -677,7 +670,6 @@ header form input {
 footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 footer a {
   font-size: 16px;
@@ -697,8 +689,6 @@ footer h2 {
   text-transform: uppercase;
 }
 footer .top-footer {
-  max-width: 1200px;
-  width: 100%;
   display: grid;
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -725,8 +715,6 @@ footer .top-footer .icons {
   }
 }
 footer .bottom-footer {
-  max-width: 1200px;
-  width: 100%;
   display: flex;
   width: 100%;
   padding-top: 2rem;

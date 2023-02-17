@@ -10,10 +10,6 @@ $violet: #5328A1;
 $brown: #95390C;
 
 /* Mixins */
-@mixin desktop {
-    max-width: 1200px;
-    width: 100%;
-}
 @mixin flex-column {
     display: flex;
     flex-direction: column;

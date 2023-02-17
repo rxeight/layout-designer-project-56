@@ -1,15 +1,15 @@
 @import 'components/variables';
 @import 'components/general';
 
-section {
-    @include flex-column;
+.container {
+    width: 100%;
     padding: 20px;
-    align-items: center;
+    @media (min-width: 1240px) {
+        max-width: 1200px;
+    }
 }
-.center {
-    align-items: center;
-}
-.tcenter {
+
+.text-align-center {
     text-align: center;
 }
 header {
@@ -87,7 +87,6 @@ header {
 }
 
 #page-description {
-    @include desktop;
     @include flex-column;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -189,7 +188,6 @@ header {
 }
 #page-pricing {
     color: $white;
-    @include desktop;
     @include flex-column;
     padding-top: 100px;
     h2 {
@@ -258,7 +256,6 @@ header {
     }
 }
 #page-news {
-    @include desktop;
     @include flex-column;
     padding-top: 100px;
     h2 {
@@ -387,7 +384,6 @@ header {
     }   
 }
 #page-app {
-    @include desktop;
     @include flex-column;
     padding-top: 100px;
     padding-bottom: 100px;
@@ -422,7 +418,6 @@ header {
     }
 }
 #page-popular-track {
-    @include desktop;
     @include flex-column;
     padding-top: 100px;
     .tracks {
@@ -451,6 +446,7 @@ header {
                 font-size: 12.8px;
             }
             h3 {
+                color: $white;
                 text-transform: uppercase;
                 line-height: 19.2px;
                 font-weight: bold;
@@ -465,7 +461,6 @@ header {
     }
 }
 #page-discography {
-    @include desktop;
     @include flex-column;
     padding-top: 100px;
     .disco {
@@ -493,6 +488,7 @@ header {
                 font-size: 16px;
             }
             h3 {
+                color: $white;
                 text-transform: capitalize;
                 line-height: 27px;
                 font-size: 18px;
@@ -514,7 +510,6 @@ header {
     }
 }
 #page-similar {
-    @include desktop;
     @include flex-column;
     padding-top: 100px;
     margin-bottom: 100px;
@@ -545,6 +540,7 @@ header {
                 text-align: center;
             }
             h3 {
+                color: $white;
                 text-transform: capitalize;
                 line-height: 27px;
                 font-size: 18px;
@@ -567,7 +563,6 @@ header {
 }
 footer {
     @include flex-column;
-    align-items: center;
     a {
         font-size: 16px;
         line-height: 24px;
@@ -586,7 +581,6 @@ footer {
         text-transform: uppercase
     }
     .top-footer {
-        @include desktop;
         display: grid;
         padding-top: 3rem;
         padding-bottom: 3rem;
@@ -610,7 +604,6 @@ footer {
         }
     }
     .bottom-footer {
-        @include desktop;
         display: flex;
         width: 100%;
         padding-top: 2rem;
