@@ -512,7 +512,7 @@ header {
 #page-similar {
     @include flex-column;
     padding-top: 100px;
-    margin-bottom: 100px;
+    padding-bottom: 100px;
     .similar {
         width: 100%;
         display: grid;
