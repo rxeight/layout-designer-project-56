@@ -1,93 +1,97 @@
 @import 'components/variables';
 @import 'components/general';
-
-.container {
+section {
     width: 100%;
-    @include media;
 }
-
-.text-align-center {
-    text-align: center;
-}
-header {
-    width: 100%;
+.wrapper {
     max-width: 1200px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 25px;
-    font-size: 11px;
-    text-transform: uppercase;
-    nav {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: $white;
-            margin-right: 90px;
-            &::before {
-                display: inline-block;
-                content: '';
-                background-image: url('../images/logo.svg');
-                background-size: cover;
-                height: 24px;
-                width: 24px;
-                margin-right: 16px;
-            }
-        }
-        .nav-link {
-            text-decoration: none;
-            color: $fade; 
-            &:hover {
-                color: $white;
-            }
-        }
-    }
-    form {
-        input {
-            color: $white;
-            width: 248px;
-            height: 25px;
-            padding-left: 10px;
-            border-style: none;
-            border-radius: 50px;
-            background-color: $grey;
-        }
-    }
+    margin: 0 auto;
+    padding: 0 20px;
     @media (max-width: 1239px) {
-        padding: 20px;
-        flex-direction: column;
-        align-items: stretch;
-        top: 0;
-        nav {
-            align-items: flex-start;
-            .logo {
-                margin-bottom: 17px;
-            }
-            flex-direction: column;
-            gap: 3px;
-            margin-bottom: 18px;
-        }
-        form {
-            width: 100%;
-            input {
-                width: 100%;
-            }
-        }
+        width: 100%;
     }
+}
+.content {
+    padding-top: 100px;
 }
 .btn {
     border-radius: 5px;
 }
-
+.flex-c {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 #page-description {
-    @include flex-column;
     padding-top: 200px;
     padding-bottom: 200px;
+    header {
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        text-transform: uppercase;
+        @media (max-width: 1239px) {
+            max-width: 100%;
+            flex-direction: column;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            @media (max-width: 1239px) {
+                flex-direction: column;
+                align-items: start;
+                gap: 3px;
+                margin-bottom: 18px;
+            }
+            .logo {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: $white;
+                margin-right: 90px;
+                &::before {
+                    display: inline-block;
+                    content: '';
+                    background-image: url('../images/logo.svg');
+                    background-size: cover;
+                    height: 24px;
+                    width: 24px;
+                    margin-right: 16px;
+                }
+                @media (max-width: 1239px) {
+                    margin-bottom: 17px;
+                }
+            }
+            .nav-link {
+                text-decoration: none;
+                color: $fade; 
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+        form {
+            input {
+                color: $white;
+                width: 248px;
+                height: 25px;
+                padding-left: 10px;
+                border-style: none;
+                border-radius: 50px;
+                background-color: $grey;
+                @media (max-width: 1239px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
     .buttons {
         display: flex;
         gap: 1.5rem;
@@ -175,7 +179,7 @@ header {
         }
     }
     @media (max-width: 1239px) {
-        width: 100%;
+        padding-top: 250px;
         p {
             margin-top: 16px;
             margin-bottom: 16px;
@@ -194,11 +198,10 @@ header {
         }
     }
 }
-#page-pricing {
+#page-pricing { 
     color: $white;
-    @include flex-column;
-    padding-top: 100px;
     h2 {
+        text-align: center;
         margin-bottom: 45px;
     }
     .prices {
@@ -256,7 +259,6 @@ header {
         font-weight: 400;
     }
     @media (max-width: 1239px) {
-        width: 100%;
         .prices {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3, 1fr);
@@ -264,9 +266,8 @@ header {
     }
 }
 #page-news {
-    @include flex-column;
-    padding-top: 100px;
     h2 {
+        text-align: center;
         margin-bottom: 48px;
     }
     .news {
@@ -365,7 +366,6 @@ header {
         }
     }
     @media (max-width: 1239px) {
-        width: 100%;
         .news {
             gap: 64px;
         }
@@ -392,9 +392,10 @@ header {
     }   
 }
 #page-app {
-    @include flex-column;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
+    h2 {
+        text-align: center;
+    }
     .app {
         display: flex;
         img {
@@ -416,7 +417,6 @@ header {
         border: none;
     }
     @media (max-width: 1239px) {
-        width: 100%;
         .app {
             flex-direction: column-reverse;
             img {
@@ -426,8 +426,6 @@ header {
     }
 }
 #page-popular-track {
-    @include flex-column;
-    padding-top: 100px;
     .tracks {
         width: 100%;
         display:grid;
@@ -469,8 +467,6 @@ header {
     }
 }
 #page-discography {
-    @include flex-column;
-    padding-top: 100px;
     .disco {
         width: 100%;
         display: grid;
@@ -518,9 +514,7 @@ header {
     }
 }
 #page-similar {
-    @include flex-column;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
     .similar {
         width: 100%;
         display: grid;
@@ -570,7 +564,6 @@ header {
     }
 }
 footer {
-    @include flex-column;
     a {
         font-size: 16px;
         line-height: 24px;
@@ -592,7 +585,6 @@ footer {
         display: grid;
         padding-top: 3rem;
         padding-bottom: 3rem;
-        width: 100%;
         grid-template-columns: repeat(4, 1fr);
         .column {
             @include flex-column;
@@ -604,7 +596,6 @@ footer {
             gap: 24px;
         }
         @media (max-width: 1239px) {
-            padding: 20px;
             gap: 30px;
             width: 100%;
             grid-template-columns: 1fr;
@@ -613,12 +604,10 @@ footer {
     }
     .bottom-footer {
         display: flex;
-        width: 100%;
         padding-top: 2rem;
         padding-bottom: 2rem;
         gap: 16px;
         @media (max-width: 1239px) {
-            padding: 20px;
             flex-direction: column;
         }
     }

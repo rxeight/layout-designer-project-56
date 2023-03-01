@@ -8,6 +8,7 @@
 }
 
 body {
+  background-color: #08020D;
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -28,32 +29,16 @@ body h2 {
   font-weight: bold;
   text-transform: uppercase;
 }
-body .align-items-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 body .banner-bg {
-  width: 100%;
-  height: 100%;
   background-image: url("../images/banner.png");
   background-position: center;
   background-size: cover;
   content: "";
 }
-body .bg {
-  width: 100%;
-  height: 100%;
-  background-color: #08020D;
-}
 body .bg-gradient {
-  width: 100%;
-  height: 100%;
   background: linear-gradient(89.75deg, #5328a1 32.83%, #95390c 81.56%);
 }
 body .artist-bg {
-  width: 100%;
-  height: 100%;
   background-image: url("../images/Morten Harket.png");
   background-position: center;
   background-size: cover;
@@ -70,48 +55,78 @@ body .artist-bg {
   }
 }
 
-.container {
+section {
   width: 100%;
 }
-@media (max-width: 1239px) {
-  .container {
-    padding: 20px;
-  }
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-@media (min-width: 1240px) {
-  .container {
-    max-width: 1200px;
+@media (max-width: 1239px) {
+  .wrapper {
+    width: 100%;
   }
 }
 
-.text-align-center {
+.content {
+  padding-top: 100px;
+}
+
+.btn {
+  border-radius: 5px;
+}
+
+.flex-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-header {
-  width: 100%;
-  max-width: 1200px;
+#page-description {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+#page-description header {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   top: 25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
   font-size: 11px;
   text-transform: uppercase;
 }
-header nav {
+@media (max-width: 1239px) {
+  #page-description header {
+    max-width: 100%;
+    flex-direction: column;
+  }
+}
+#page-description header nav {
   display: flex;
   align-items: center;
   gap: 24px;
 }
-header nav .logo {
+@media (max-width: 1239px) {
+  #page-description header nav {
+    flex-direction: column;
+    align-items: start;
+    gap: 3px;
+    margin-bottom: 18px;
+  }
+}
+#page-description header nav .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #fff;
   margin-right: 90px;
 }
-header nav .logo::before {
+#page-description header nav .logo::before {
   display: inline-block;
   content: "";
   background-image: url("../images/logo.svg");
@@ -120,14 +135,19 @@ header nav .logo::before {
   width: 24px;
   margin-right: 16px;
 }
-header nav .nav-link {
+@media (max-width: 1239px) {
+  #page-description header nav .logo {
+    margin-bottom: 17px;
+  }
+}
+#page-description header nav .nav-link {
   text-decoration: none;
   color: #cacaca;
 }
-header nav .nav-link:hover {
+#page-description header nav .nav-link:hover {
   color: #fff;
 }
-header form input {
+#page-description header form input {
   color: #fff;
   width: 248px;
   height: 25px;
@@ -137,38 +157,9 @@ header form input {
   background-color: #3C3B3D;
 }
 @media (max-width: 1239px) {
-  header {
-    padding: 20px;
-    flex-direction: column;
-    align-items: stretch;
-    top: 0;
-  }
-  header nav {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 3px;
-    margin-bottom: 18px;
-  }
-  header nav .logo {
-    margin-bottom: 17px;
-  }
-  header form {
+  #page-description header form input {
     width: 100%;
   }
-  header form input {
-    width: 100%;
-  }
-}
-
-.btn {
-  border-radius: 5px;
-}
-
-#page-description {
-  display: flex;
-  flex-direction: column;
-  padding-top: 200px;
-  padding-bottom: 200px;
 }
 #page-description .buttons {
   display: flex;
@@ -272,7 +263,7 @@ header form input {
 }
 @media (max-width: 1239px) {
   #page-description {
-    width: 100%;
+    padding-top: 250px;
   }
   #page-description p {
     margin-top: 16px;
@@ -292,11 +283,9 @@ header form input {
 
 #page-pricing {
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
 }
 #page-pricing h2 {
+  text-align: center;
   margin-bottom: 45px;
 }
 #page-pricing .prices {
@@ -360,21 +349,14 @@ header form input {
   font-weight: 400;
 }
 @media (max-width: 1239px) {
-  #page-pricing {
-    width: 100%;
-  }
   #page-pricing .prices {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
 }
 
-#page-news {
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-}
 #page-news h2 {
+  text-align: center;
   margin-bottom: 48px;
 }
 #page-news .news {
@@ -464,9 +446,6 @@ header form input {
   content: "24/02/2020";
 }
 @media (max-width: 1239px) {
-  #page-news {
-    width: 100%;
-  }
   #page-news .news {
     gap: 64px;
   }
@@ -494,10 +473,10 @@ header form input {
 }
 
 #page-app {
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
+}
+#page-app h2 {
+  text-align: center;
 }
 #page-app .app {
   display: flex;
@@ -525,9 +504,6 @@ header form input {
   border: none;
 }
 @media (max-width: 1239px) {
-  #page-app {
-    width: 100%;
-  }
   #page-app .app {
     flex-direction: column-reverse;
   }
@@ -536,11 +512,6 @@ header form input {
   }
 }
 
-#page-popular-track {
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-}
 #page-popular-track .tracks {
   width: 100%;
   display: grid;
@@ -581,11 +552,6 @@ header form input {
   }
 }
 
-#page-discography {
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-}
 #page-discography .disco {
   width: 100%;
   display: grid;
@@ -631,10 +597,7 @@ header form input {
 }
 
 #page-similar {
-  display: flex;
-  flex-direction: column;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 #page-similar .similar {
   width: 100%;
@@ -682,10 +645,6 @@ header form input {
   }
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-}
 footer a {
   font-size: 16px;
   line-height: 24px;
@@ -707,7 +666,6 @@ footer .top-footer {
   display: grid;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  width: 100%;
   grid-template-columns: repeat(4, 1fr);
 }
 footer .top-footer .column {
@@ -722,7 +680,6 @@ footer .top-footer .icons {
 }
 @media (max-width: 1239px) {
   footer .top-footer {
-    padding: 20px;
     gap: 30px;
     width: 100%;
     grid-template-columns: 1fr;
@@ -731,14 +688,12 @@ footer .top-footer .icons {
 }
 footer .bottom-footer {
   display: flex;
-  width: 100%;
   padding-top: 2rem;
   padding-bottom: 2rem;
   gap: 16px;
 }
 @media (max-width: 1239px) {
   footer .bottom-footer {
-    padding: 20px;
     flex-direction: column;
   }
 }
