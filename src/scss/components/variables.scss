@@ -10,6 +10,7 @@ $violet: #5328A1;
 $brown: #95390C;
 
 /* Mixins */
+
 @mixin flex-column {
     display: flex;
     flex-direction: column;
@@ -29,12 +30,4 @@ $brown: #95390C;
     margin-bottom: 1.5rem;
     border: 2px solid $fade;
     border-radius: 3px;
-}
-@mixin media {
-    @media (max-width: 1239px) {
-        padding: 20px;
-    }
-    @media (min-width: 1240px) {
-        max-width: 1200px;
-    }
 }
