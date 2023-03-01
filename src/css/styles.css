@@ -72,7 +72,6 @@ body .artist-bg {
 
 .container {
   width: 100%;
-  padding: 20px;
 }
 @media (min-width: 1240px) {
   .container {
@@ -86,10 +85,11 @@ body .artist-bg {
 
 header {
   width: 100%;
+  max-width: 1200px;
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   top: 25px;
   font-size: 11px;
   text-transform: uppercase;
@@ -230,6 +230,9 @@ header form input {
   min-width: 270px;
   min-height: 50px;
 }
+#page-description .text-form form input::placeholder {
+  color: #fff;
+}
 #page-description .text-form form .name {
   background: transparent;
   color: #fff;
@@ -254,6 +257,7 @@ header form input {
   background-color: #34C176;
   padding: 20px 30px;
   border-radius: 5px;
+  border-color: transparent;
 }
 @media (max-width: 1239px) {
   #page-description {

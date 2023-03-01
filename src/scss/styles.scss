@@ -3,7 +3,6 @@
 
 .container {
     width: 100%;
-    padding: 20px;
     @media (min-width: 1240px) {
         max-width: 1200px;
     }
@@ -14,10 +13,11 @@
 }
 header {
     width: 100%;
+    max-width: 1200px;
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     top: 25px;
     font-size: 11px;
     text-transform: uppercase;
@@ -148,6 +148,9 @@ header {
             input {
                 min-width: 270px;
                 min-height: 50px;
+                &::placeholder {
+                    color: $white;
+                }
             }
             .name {
                 @include form-field;
@@ -163,6 +166,7 @@ header {
                 background-color: $green;
                 padding: 20px 30px;
                 border-radius: 5px;
+                border-color: transparent;
             };
         }
     }
