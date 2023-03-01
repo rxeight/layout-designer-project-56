@@ -73,6 +73,11 @@ body .artist-bg {
 .container {
   width: 100%;
 }
+@media (max-width: 1239px) {
+  .container {
+    padding: 20px;
+  }
+}
 @media (min-width: 1240px) {
   .container {
     max-width: 1200px;
@@ -258,6 +263,12 @@ header form input {
   padding: 20px 30px;
   border-radius: 5px;
   border-color: transparent;
+}
+#page-description .buttons {
+  margin-top: 48px;
+}
+#page-description .buttons .btn {
+  justify-content: flex-start;
 }
 @media (max-width: 1239px) {
   #page-description {
