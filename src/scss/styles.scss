@@ -1,14 +1,11 @@
 @import 'components/variables';
 @import 'components/general';
-section {
-    width: 100%;
-}
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
     @media (max-width: 1239px) {
         width: 100%;
+        padding: 0 20px;
     }
 }
 .content {
@@ -428,15 +425,13 @@ section {
 }
 #page-popular-track {
     .tracks {
-        width: 100%;
-        display:grid;
+        display: grid;
         column-gap: 50px;
         row-gap: 25px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
     .popular-track {
-        width: 100%;
         display: flex;
         gap: 15px;
         img {
@@ -469,7 +464,6 @@ section {
 }
 #page-discography {
     .disco {
-        width: 100%;
         display: grid;
         column-gap: 50px;
         row-gap: 25px;
@@ -485,7 +479,6 @@ section {
             height: 250px;
         }
         .discography-info {
-            width: 100%;
             display: flex;
             flex-direction: column;
             h3,p {

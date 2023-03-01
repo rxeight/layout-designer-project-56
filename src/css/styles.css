@@ -55,18 +55,14 @@ body .artist-bg {
   }
 }
 
-section {
-  width: 100%;
-}
-
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 @media (max-width: 1239px) {
   .wrapper {
     width: 100%;
+    padding: 0 20px;
   }
 }
 
@@ -514,7 +510,6 @@ section {
 }
 
 #page-popular-track .tracks {
-  width: 100%;
   display: grid;
   column-gap: 50px;
   row-gap: 25px;
@@ -522,7 +517,6 @@ section {
   grid-template-rows: repeat(3, 1fr);
 }
 #page-popular-track .popular-track {
-  width: 100%;
   display: flex;
   gap: 15px;
 }
@@ -554,7 +548,6 @@ section {
 }
 
 #page-discography .disco {
-  width: 100%;
   display: grid;
   column-gap: 50px;
   row-gap: 25px;
@@ -571,7 +564,6 @@ section {
   height: 250px;
 }
 #page-discography .discography-item .discography-info {
-  width: 100%;
   display: flex;
   flex-direction: column;
 }
